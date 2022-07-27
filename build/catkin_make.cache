@@ -1,0 +1,2 @@
+racecar/ackermann_cmd_mux:racecar/racecar:razor_imu_9dof:rplidar_ros:usb_cam:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs:wego
+-DCATKIN_DEVEL_PREFIX=/home/wego/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wego/catkin_ws/install -G Unix Makefiles

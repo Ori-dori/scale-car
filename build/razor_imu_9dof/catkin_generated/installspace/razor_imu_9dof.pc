@@ -1,0 +1,8 @@
+prefix=/home/wego/catkin_ws/install
+
+Name: razor_imu_9dof
+Description: Description of razor_imu_9dof
+Version: 1.3.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: dynamic_reconfigure
