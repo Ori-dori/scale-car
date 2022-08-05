@@ -1,0 +1,10 @@
+<launch>
+    
+
+    <node name="main_control" type="main.py" pkg="scalecar" output="screen"/>
+ 
+    
+    <include file="$(find racecar)/launch/teleop.launch" />
+    
+
+</launch>

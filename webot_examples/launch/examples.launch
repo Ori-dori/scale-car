@@ -1,0 +1,12 @@
+<launch>
+    
+
+    <node name="camera_example" type="camera_examples.py" pkg="webot_examples" output="screen"/>
+    <node name="control_example" type="control_example.py" pkg="webot_examples" output="screen"/>
+    <node name="lidar_example" type="lidar_example.py" pkg="webot_examples" output="screen"/>
+
+    
+    <include file="$(find racecar)/launch/teleop.launch" />
+    
+
+</launch>
