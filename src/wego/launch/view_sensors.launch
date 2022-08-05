@@ -1,0 +1,5 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  <node pkg="rviz" name="rviz" type="rviz" args="-d $(find wego)/rviz/view_sensors.rviz"/>
+
+</launch>
