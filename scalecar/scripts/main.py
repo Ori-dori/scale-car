@@ -6,18 +6,22 @@ import rospy
 from ackermann_msgs.msg import AckermannDriveStamped
 from std_msgs.msg import Int32, String
 from sensor_msgs.msg import Image # sensor_msgs/Image 타입을 사용하기 위해 추가한 부분
-from cv_bridge import CvBridge # Ros image -- > OpenCV Image로 변경하기 위해 필요한 부분
-from std_msgs.msg import Int32 # x 값 publish 하기 위함
+
+from cv_bridge import CvBridge # Ros image -- > OpenCV Image로 변경하기 위해 필요한 부분\
 import cv2
 import numpy as np
+
 from warper import Warper
 from slidewindow import SlideWindow
 
 bridge = CvBridge()
 warper = Warper()
+slidewindow = SlideWindow()
+
 slide_x_location = 0
 ref_slide_x_location = 320
 initialized = False
+
 cv_image = None
 
 
@@ -26,7 +30,6 @@ def main():
     rospy.init_node("main_control") 
     rospy.loginfo("main in !!!!!!!!!!!!!!!!!!!!!!!!!!")
     initialized = False # lane_callback 
-
     rospy.Subscriber("usb_cam/image_rect_color", Image, lane_callback) # Subscriber 생성자 필수 입력 3가지 --> Subscribe 하려는 Topic, 해당 Topic의 Message Type, 동작 callback 함수 
     drive_pub = rospy.Publisher("high_level/ackermann_cmd_mux/input/nav_0", AckermannDriveStamped, queue_size=1)
 
@@ -92,7 +95,7 @@ def lane_callback(data):
         cv2.createTrackbar('high_V', 'Simulator_Image', 255, 255, nothing)
         initialized = True
 
-        
+
     cv2.imshow("cv2_image", cv_image)
 
     # H(Hue : 색상), S(Saturation : 채도), V(Value : 명도)
@@ -135,7 +138,7 @@ def lane_detection(lane_image):
     global slide_x_location
     warped_img = warper.warp(lane_image)
     cv2.imshow("warped_img", warped_img)
-    slide__img, slide_x_location = SlideWindow.slidewindow(warped_img)
+    slide__img, slide_x_location = slidewindow.slidewindow(warped_img)
     cv2.imshow("slide_img", slide_img)
 
 
