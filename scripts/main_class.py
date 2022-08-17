@@ -35,10 +35,12 @@ class Controller():
         self.drive_angle = 0
 
         # first lane direction 
-        self.current_lane = "LEFT"
+        self.current_lane = "RIGHT"
 
         # 초기에는 안전하다고 가정하고 시작
         self.is_safe = True 
+        self.detect_cnt = 0
+        self.last_cnt = 0
 
         # lane_callback
         self.initialized = False 
@@ -53,24 +55,30 @@ class Controller():
 
         # for static obstacle variable initialization
         self.detect_car = ""
-
+        self.obs_do = True
+        self.obs_notdo = False
         # for dynamic obstacle variable initialization
         self.detect_dyn_obs = "NONE"
 
         self.rabacon_mission_flag = False
         self.rabacon_mission_angle = 0
 
+        self.is_obs_static =0
+
         rospy.Timer(rospy.Duration(1.0/30.0), self.timer_callback)
         rospy.Subscriber("usb_cam/image_rect_color", Image, self.lane_callback) 
-        rospy.Subscriber("lidar_warning", String, self.warning_callback) # lidar 에서 받아온 object 탐지 subscribe (warning / safe)
+        # rospy.Subscriber("obstacle_mission", String, self.warning_callback)
+        #rospy.Subscriber("lidar_warning", String, self.warning_callback) # lidar 에서 받아온 object 탐지 subscribe (warning / safe)
+        
         self.drive_pub = rospy.Publisher("high_level/ackermann_cmd_mux/input/nav_0", AckermannDriveStamped, queue_size=1)
         rospy.Subscriber("sign_id", Int32, self.child_sign_callback)
+        rospy.Subscriber("lidar_warning", Int32, self.warning_callback)
         # rospy.Subscriber("rabacon_drive", Float32, self.rabacon_callback)
         # rospy.Subscriber("obstacles", Obstacles, self.rabacon_callback)
-
+     
 
     def warning_callback(self, _data):
-       
+        rospy.loginfo("point_cnt: {}".format(_data.data))
         if self.rabacon_mission_flag == True :
             self.rabacon_mission_flag = True
         elif _data.data == "safe":
@@ -81,8 +89,78 @@ class Controller():
         elif _data.data == "DYNAMIC_OBS":
             self.detect_dyn_obs = "OBS_DETECT"
             self.is_safe = False
+        elif _data.data > 0:
+            self.detect_car = "OBSTACLE DETECTION"
+            self.detect_cnt = _data.data
+            rospy.logwarn("OBSTACLE DETECTION")
+            
+        elif _data.data == 0:
+            self.detect_cnt = 0
+            rospy.logwarn("깔-끔")
+            
         else:
             rospy.logwarn("Unkown warning state!!")
+
+    def obs_condition(self):
+        rospy.logwarn("obs_condition")
+        rospy.logwarn("flag:{}".format(self.callback_flag))
+        if self.detect_car == "OBSTACLE DETECTION" :
+            rospy.loginfo("obstacle detection")
+            
+            
+            self.last_cnt = self.detect_cnt
+            rospy.sleep(2)
+            # one_time_msg = rospy.wait_for_message("lidar_warning", Int32, timeout=None)
+            # rospy.loginfo("&&&&&&& one msg : {}".format(one_time_msg))
+            rospy.loginfo("&&&&&&& last_cnt : {}".format(self.last_cnt))
+            rospy.loginfo("&&&&&&& detect_cnt : {}".format(self.detect_cnt))
+
+            print("CURRENT_LANE: {}".format(self.current_lane))
+
+            if self.last_cnt-3 <= self.detect_cnt <= self.last_cnt+3:        
+                rospy.logwarn("static obstacle")
+                rospy.loginfo("static obstacle")
+                self.last_cnt = 0
+                if self.current_lane == "LEFT":
+                    for i in range(600) :
+                        print("***************{}****************".format(i))
+                        self.change_line_right()
+                    if self.current_lane_window == "MID" :
+                        for i in range(250) :
+                            self.change_line_right()
+                   
+                    self.current_lane = "RIGHT"
+                    self.detect_car == "DEFAULT"
+                    #elf.follow_lane()
+                    
+                elif self.current_lane == "RIGHT":
+                    for i in range(600) :
+                        self.change_line_left()
+                    if self.current_lane_window == "MID" :
+                        for i in range(250) :
+                            self.change_line_left()
+                    
+                    self.current_lane = "LEFT"
+                    self.detect_car == "DEFAULT"
+                    #self.follow_lane()
+                # self.callback_flag = False
+                self.follow_lane()
+
+
+                              
+            else:
+                self.last_cnt = 0
+                rospy.logwarn("dynamic obstacle")
+                rospy.loginfo("dynamic obstacle")
+                #self.callback_flag = False
+                self.follow_lane()
+        else:
+            rospy.logwarn("obs")
+            # self.callback_flag = False
+            self.follow_lane()
+                 
+                
+
 
     def rabacon_callback(self, _data) :
         self.rabacon_mission_flag = _data.data
@@ -136,6 +214,7 @@ class Controller():
 
     def follow_lane(self): # 차선데이터를 받아서 차선을 따라서 주행하도록 하는 함수
 
+       
         # rospy.loginfo("CURRENT_LANE : {}".format(self.current_lane))
         # self.child_sign_callback()
         # if self.warning: # object 탐지 시 멈추도록  --> 이런 로직 이용해서 정적 장애물 회피 로직으로 수정하면 될 듯 
@@ -157,15 +236,41 @@ class Controller():
         #         rospy.loginfo("************* STOP (OBS DETECTED) *****************")
         #         self.stop()
 
+        #rospy.logwarn("?????")
 
-        if self.detect_car == "CAR_DETECT" and self.current_lane == "RIGHT":
-            self.callback_flag = True
-            #self.lane_change = True
-            for i in range(500) :
-                self.change_line_left()
-            if self.current_lane_window == "MID" :
-                for i in range(250) :
-                    self.change_line_left()
+                    
+                        
+                # cnt_list = []
+            # cnt_set = set()
+            # for i in range(10):rospy.Subscriber("lidar_warning", Int32, self.warning_callback)
+            #     print("cnt_list:", cnt_list)
+            #     print("cnt_set:", cnt_set)
+            #     print("cnt:", self.detect_cnt)
+            #     cnt_list.append(self.detect_cnt)
+            #     cnt_set.add(self.detect_cnt)
+            # rospy.loginfo("cnt_set:", cnt_set)
+            # print("cnt_set:", cnt_set)
+            # if len(cnt_set) < 3:
+            #     rospy.loginfo("static obstacle")
+            # else:
+            #     rospy.loginfo("dynamic obstacle")
+            # cnt_set.clear()
+            #self.follow_lane()
+
+
+        #if self.detect_car == "CAR_DETECT" and self.current_lane == "RIGHT":
+
+        #     for i in range(1000):
+
+
+        #     self.callback_flag = True
+        #     #self.lane_change = True
+        #     for i in range(500) :
+        #         self.change_line_left()
+        #     if self.current_lane_window == "MID" :
+        #         for i in range(250) :
+        #             self.change_line_left()
+        
 
             # mid_cnt = 0
             # if self.current_lane_window == "MID" :
@@ -178,21 +283,21 @@ class Controller():
             #     # if self.current_lane_window != "MID" :
             #     while self.current_lane_window == "MID" :
             #         self.change_line_left()
-            self.current_lane = "LEFT"
-            self.detect_car == "DEFAULT"
-            self.follow_lane()
-            self.callback_flag = False
+            # self.current_lane = "LEFT"
+            # self.detect_car == "DEFAULT"
+            # self.follow_lane()
+            # self.callback_flag = False
 
             
-        elif self.detect_car == "CAR_DETECT" and self.current_lane =="LEFT" :
-            self.callback_flag = True
-            for i in range(500) :
-                self.change_line_right()
-            mid_cnt = 0
-            if self.current_lane_window == "MID" :
-                print("moremoremoremoremoremoremormeroemromaeo")
-                for i in range(250) :
-                    self.change_line_right()
+        # elif self.detect_car == "CAR_DETECT" and self.current_lane =="LEFT" and self.is_obs_static == 1:
+        #     self.callback_flag = True
+        #     for i in range(500) :
+        #         self.change_line_right()
+        #     mid_cnt = 0
+        #     if self.current_lane_window == "MID" :
+        #         print("moremoremoremoremoremoremormeroemromaeo")
+        #         for i in range(250) :
+        #             self.change_line_right()
             # if self.current_lane_window == "MID" :
             #     mid_cnt += 1
 
@@ -204,12 +309,21 @@ class Controller():
             #         self.change_line_right()
             #         print("@@@@@@@@@@@@@")
 
-            self.current_lane = "RIGHT"
-            self.detect_car = "DEFAULT"
-            self.follow_lane()
-            self.callback_flag = False
+            # self.current_lane = "RIGHT"
+            # self.detect_car = "DEFAULT"
+            # self.follow_lane()
+            # self.callback_flag = False
             # rospy.loginfo("LiDAR object is detected!!")
 
+
+        if self.detect_car == "OBSTACLE DETECTION" and self.callback_flag == False :
+            rospy.loginfo("#################################################")    
+            self.callback_flag = True   
+            self.stop()
+            #self.callback_flag = False
+            
+            
+                
         # slow_down_sign 
         elif self.slow_down_flag == 1:
             rospy.loginfo("************* SLOW DOWN *****************")
@@ -220,10 +334,12 @@ class Controller():
             publishing_data.drive.steering_angle = self.error_lane * 0.005 # error 정도에 따라서 조향 
             publishing_data.drive.speed = 0.2
             self.drive_pub.publish(publishing_data) # 실제 publish 하는 부분
+        
         else:
-            
-                
             rospy.loginfo("DEFAULT DRIVE!!!!!!!!!")
+            rospy.loginfo("callbackflag : {}, {}".format(self.callback_flag, self.detect_car))
+            self.callback_flag = False
+            
             self.error_lane = 280 - self.slide_x_location # error가 음수 --> 오른쪽 차선이랑 멈 / error가 양수 --> 오른쪽 차선이랑 가까움
             # error가 음수 --> 오른쪽 차선이랑 멈 --> 오른쪽으로 조향(sttering_angle < 0)
             # error가 양수 --> 오른쪽 차선이랑 가까움 --> 왼쪽으로 조향(sttering_angle > 0)
@@ -237,7 +353,8 @@ class Controller():
             publishing_data.drive.speed = 0.5
             self.drive_pub.publish(publishing_data) # 실제 publish 하는 부분 
         # rospy.loginfo("Publish Control Data!")
-
+        
+        
 
     def stop(self): 
         publishing_data = AckermannDriveStamped()
@@ -247,6 +364,10 @@ class Controller():
         publishing_data.drive.speed = 0.0
         self.drive_pub.publish(publishing_data) # 실제 publish 하는 부분 
         rospy.loginfo("Stop Vehicle!")
+        rospy.sleep(1)
+        self.obs_condition()
+        rospy.loginfo("move please")
+        rospy.sleep(1)
 
 
 
@@ -298,7 +419,7 @@ class Controller():
         publishing_data.drive.speed = 0.3
         publishing_data.drive.steering_angle = 5
         self.drive_pub.publish(publishing_data)
-
+        #self.callback_flag = False  
         # sleep(10)
         # publishing_data.drive.steering_angle -= 0.5
         # self.drive_pub.publish(publishing_data)
@@ -328,6 +449,7 @@ class Controller():
         publishing_data.drive.speed = 0.3
         publishing_data.drive.steering_angle = -5
         self.drive_pub.publish(publishing_data)
+        #self.callback_flag = False  
         # sleep(10)
         # publishing_data.drive.steering_angle -= 0.5
         # self.drive_pub.publish(publishing_data)
@@ -344,6 +466,7 @@ class Controller():
         publishing_data.drive.speed = 0.2
         publishing_data.drive.steering_angle = self.rabacon_mission_flag
         self.drive_pub.publish(publishing_data)
+        
         
         sleep(1)
 
