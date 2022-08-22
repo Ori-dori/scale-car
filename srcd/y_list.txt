@@ -1,0 +1,1917 @@
+... logging to /home/wego/.ros/log/72f02296-2142-11ed-b144-a533ef8be2d1/roslaunch-wego-NUC11TNKi5-62709.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wego/catkin_ws/src/scalecar/launch/scale_total_lunch.launch
+[1mstarted roslaunch server http://wego-NUC11TNKi5:46737/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /aruco_detect/dictionary: 7
+ * /aruco_detect/do_pose_estimation: True
+ * /aruco_detect/fiducial_len: 0.14
+ * /aruco_detect/fiducial_len_override: 
+ * /aruco_detect/ignore_fiducials: 
+ * /aruco_detect/image_transport: compressed
+ * /aruco_detect/publish_images: True
+ * /aruco_detect/verbose: False
+ * /aruco_detect/vis_msgs: True
+ * /high_level/ackermann_cmd_mux/yaml_cfg_file: /home/wego/catkin...
+ * /image_view/autosize: True
+ * /imu_node/accel_x_max: 250.0
+ * /imu_node/accel_x_min: -250.0
+ * /imu_node/accel_y_max: 250.0
+ * /imu_node/accel_y_min: -250.0
+ * /imu_node/accel_z_max: 250.0
+ * /imu_node/accel_z_min: -250.0
+ * /imu_node/calibration_magn_use_extended: False
+ * /imu_node/device: /dev/imu
+ * /imu_node/frame_id: base_imu_link
+ * /imu_node/gyro_average_offset_x: 0.0
+ * /imu_node/gyro_average_offset_y: 0.0
+ * /imu_node/gyro_average_offset_z: 0.0
+ * /imu_node/imu_yaw_calibration: 0.0
+ * /imu_node/magn_ellipsoid_center: [0, 0, 0]
+ * /imu_node/magn_ellipsoid_transform: [[0, 0, 0], [0, 0...
+ * /imu_node/magn_x_max: 600.0
+ * /imu_node/magn_x_min: -600.0
+ * /imu_node/magn_y_max: 600.0
+ * /imu_node/magn_y_min: -600.0
+ * /imu_node/magn_z_max: 600.0
+ * /imu_node/magn_z_min: -600.0
+ * /imu_node/port: /dev/ttyImu
+ * /imu_node/topic: imu
+ * /joy_node/autorepeat_rate: 20
+ * /joy_node/coalesce_interval: 0.01
+ * /joy_node/deadzone: 0.01
+ * /laser_node/ip_address: 192.168.0.10
+ * /low_level/ackermann_cmd_mux/yaml_cfg_file: /home/wego/catkin...
+ * /max_acceleration: 3.5
+ * /max_servo_speed: 3.2
+ * /nodelet_manager/num_worker_threads: 20
+ * /obstacle_extractor/active: True
+ * /obstacle_extractor/circles_from_visibles: True
+ * /obstacle_extractor/discard_converted_segments: True
+ * /obstacle_extractor/distance_proportion: 0.00628
+ * /obstacle_extractor/frame_id: map
+ * /obstacle_extractor/max_circle_radius: 0.6
+ * /obstacle_extractor/max_group_distance: 0.12
+ * /obstacle_extractor/max_merge_separation: 0.12
+ * /obstacle_extractor/max_merge_spread: 0.15
+ * /obstacle_extractor/max_split_distance: 0.12
+ * /obstacle_extractor/min_group_points: 10
+ * /obstacle_extractor/radius_enlargement: 0.3
+ * /obstacle_extractor/transform_coordinates: False
+ * /obstacle_extractor/use_pcl: False
+ * /obstacle_extractor/use_scan: True
+ * /obstacle_extractor/use_split_and_merge: True
+ * /obstacle_publisher/active: False
+ * /obstacle_publisher/fission_example: False
+ * /obstacle_publisher/frame_id: map
+ * /obstacle_publisher/fusion_example: False
+ * /obstacle_publisher/loop_rate: 10.0
+ * /obstacle_publisher/radius_margin: 0.25
+ * /obstacle_publisher/reset: False
+ * /obstacle_tracker/active: True
+ * /obstacle_tracker/frame_id: map
+ * /obstacle_tracker/loop_rate: 100.0
+ * /obstacle_tracker/measurement_variance: 1.0
+ * /obstacle_tracker/min_correspondence_cost: 0.6
+ * /obstacle_tracker/process_rate_variance: 0.1
+ * /obstacle_tracker/process_variance: 0.1
+ * /obstacle_tracker/std_correspondence_dev: 0.15
+ * /obstacle_tracker/tracking_duration: 2.0
+ * /rosdistro: noetic
+ * /rosversion: 1.15.14
+ * /rplidarNode/angle_compensate: True
+ * /rplidarNode/frame_id: laser
+ * /rplidarNode/inverted: False
+ * /rplidarNode/serial_baudrate: 256000
+ * /rplidarNode/serial_port: /dev/ttyRplidar
+ * /scans_merger/active: False
+ * /scans_merger/fixed_frame_id: map
+ * /scans_merger/max_scanner_range: 10.0
+ * /scans_merger/max_x_range: 10.0
+ * /scans_merger/max_y_range: 10.0
+ * /scans_merger/min_scanner_range: 0.05
+ * /scans_merger/min_x_range: -10.0
+ * /scans_merger/min_y_range: -10.0
+ * /scans_merger/publish_pcl: False
+ * /scans_merger/publish_scan: True
+ * /scans_merger/ranges_num: 1000
+ * /scans_merger/target_frame_id: robot
+ * /servo_smoother_rate: 75.0
+ * /speed_to_erpm_gain: 4614
+ * /speed_to_erpm_offset: 0.0
+ * /steering_angle_to_servo_gain: -1.2135
+ * /steering_angle_to_servo_offset: 0.546
+ * /tachometer_ticks_to_meters_gain: 0.00225
+ * /teleop/autonomous_control/deadman_buttons: [5]
+ * /teleop/autonomous_control/message_type: std_msgs/Int8
+ * /teleop/autonomous_control/message_value: [{'target': 'data...
+ * /teleop/autonomous_control/topic_name: /dev/null
+ * /teleop/autonomous_control/type: topic
+ * /teleop/default/is_default: True
+ * /teleop/default/message_type: ackermann_msgs/Ac...
+ * /teleop/default/message_value: [{'target': 'driv...
+ * /teleop/default/topic_name: low_level/ackerma...
+ * /teleop/default/type: topic
+ * /teleop/human_control/axis_mappings: [{'axis': 1, 'tar...
+ * /teleop/human_control/deadman_buttons: [4]
+ * /teleop/human_control/message_type: ackermann_msgs/Ac...
+ * /teleop/human_control/topic_name: low_level/ackerma...
+ * /teleop/human_control/type: topic
+ * /throttle_smoother_rate: 75.0
+ * /usb_cam/camera_frame_id: usb_cam
+ * /usb_cam/image_height: 480
+ * /usb_cam/image_width: 640
+ * /usb_cam/io_method: mmap
+ * /usb_cam/pixel_format: yuyv
+ * /usb_cam/video_device: /dev/video0
+ * /vesc_driver/brake_max: 200000.0
+ * /vesc_driver/brake_min: -20000.0
+ * /vesc_driver/current_max: 20.0
+ * /vesc_driver/current_min: 0.0
+ * /vesc_driver/duty_cycle_max: 0.0
+ * /vesc_driver/duty_cycle_min: 0.0
+ * /vesc_driver/port: /dev/ttyVesc
+ * /vesc_driver/position_max: 0.0
+ * /vesc_driver/position_min: 0.0
+ * /vesc_driver/servo_max: 1.0
+ * /vesc_driver/servo_min: 0.0
+ * /vesc_driver/speed_max: 10000
+ * /vesc_driver/speed_min: -10000
+ * /vesc_to_odom/publish_tf: False
+ * /wheelbase: 0.25
+
+NODES
+  /
+    ackermann_to_vesc (vesc_ackermann/ackermann_to_vesc_node)
+    aruco_detect (aruco_detect/aruco_detect)
+    base_link_to_imu (tf2_ros/static_transform_publisher)
+    base_link_to_laser (tf2_ros/static_transform_publisher)
+    child_sign (scalecar/child_sign.py)
+    detect_obs (scalecar/detect_clust_obs.py)
+    image_view (image_view/image_view)
+    imu_node (razor_imu_9dof/imu_node.py)
+    joy_node (joy/joy_node)
+    joy_teleop (racecar/joy_teleop.py)
+    main_class_run (scalecar/main_class_hsv.py)
+    mux_chainer (topic_tools/relay)
+    mux_topic_backward_compat_navigation (topic_tools/relay)
+    mux_topic_backward_compat_safety (topic_tools/relay)
+    mux_topic_backward_compat_teleop (topic_tools/relay)
+    nodelet_manager (nodelet/nodelet)
+    obstacle_extractor (nodelet/nodelet)
+    obstacle_publisher (nodelet/nodelet)
+    obstacle_tracker (nodelet/nodelet)
+    rabacon_drive (scalecar/rabacon_drive.py)
+    rplidarNode (rplidar_ros/rplidarNode)
+    rviz (rviz/rviz)
+    scans_merger (nodelet/nodelet)
+    throttle_interpolator (ackermann_cmd_mux/throttle_interpolator.py)
+    usb_cam (usb_cam/usb_cam_node)
+    vesc_driver (vesc_driver/vesc_driver_node)
+    vesc_to_odom (vesc_ackermann/vesc_to_odom_node)
+    zero_ackermann_cmd (rostopic/rostopic)
+  /high_level/
+    ackermann_cmd_mux (nodelet/nodelet)
+    ackermann_cmd_mux_nodelet_manager (nodelet/nodelet)
+  /low_level/
+    ackermann_cmd_mux (nodelet/nodelet)
+    ackermann_cmd_mux_nodelet_manager (nodelet/nodelet)
+
+auto-starting new master
+[1mprocess[master]: started with pid [62724][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wego/catkin_ws/src/scalecar/launch/scale_total_lunch.launch http://localhost:11311
+[1msetting /run_id to 72f02296-2142-11ed-b144-a533ef8be2d1[0m
+[1mprocess[rosout-1]: started with pid [62741][0m
+started core service [/rosout]
+[1mprocess[main_class_run-2]: started with pid [62748][0m
+[1mprocess[detect_obs-3]: started with pid [62749][0m
+[1mprocess[child_sign-4]: started with pid [62750][0m
+[1mprocess[rabacon_drive-5]: started with pid [62751][0m
+[1mprocess[joy_node-6]: started with pid [62752][0m
+[1mprocess[joy_teleop-7]: started with pid [62753][0m
+[1mprocess[mux_chainer-8]: started with pid [62754][0m
+[1mprocess[mux_topic_backward_compat_safety-9]: started with pid [62760][0m
+[1mprocess[mux_topic_backward_compat_teleop-10]: started with pid [62761][0m
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+h :  480
+w :  640
+[INFO] [1661080481.114316]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.123109]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.147607]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.156470]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.180941]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.189847]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.214239]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.223076]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.247626]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.256437]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.280906]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.289836]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.314228]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.323140]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.347561]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.356484]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.380874]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.389760]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.414232]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.423075]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.447566]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.456530]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.481073]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.490065]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.514488]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.523070]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.547627]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.556453]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.580891]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.589757]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.614331]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.623081]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.647569]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.656397]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.680882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.689712]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.714236]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.723063]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.747560]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.756456]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.780873]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.789988]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.814338]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.823102]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.847568]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.856415]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.880878]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.889716]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.914333]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.923060]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.947552]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.956395]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.980904]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080481.989727]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.014672]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.023229]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.047583]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.056438]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.080885]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.089721]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.114472]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.123264]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.147568]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.156434]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.180918]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.189791]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.214606]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.223188]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.247581]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.256418]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.280880]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.289838]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.314213]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.323072]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.347634]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.356407]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.380895]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.389773]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.414209]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.423057]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.447636]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.456464]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.480888]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.490002]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.514228]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.523096]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.547564]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.556399]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.580876]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.589851]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.614405]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.623271]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.647774]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.656659]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.681093]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.690013]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.714451]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.723298]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.747587]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.756433]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.781000]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.789937]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.814405]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.823245]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.847585]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.856430]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.881044]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.890023]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.914445]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.923298]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.947575]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.956421]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.980896]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080482.990072]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.014397]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.023182]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.047617]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.056454]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.080891]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.089790]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.114517]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.123230]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.147905]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.156437]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.180903]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.189723]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.214394]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.223289]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.247697]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.256444]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.280898]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.289773]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.314373]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.323424]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.347592]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.356478]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.380919]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.389721]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.414367]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.423227]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.447592]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.456482]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.480897]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.489764]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.514226]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.523181]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.547571]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.556565]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.580895]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.589776]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.614212]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.623171]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.647569]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.656417]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.680902]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.689778]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.714331]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.723228]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.747582]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.756446]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.780896]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.789758]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.814215]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.823111]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.847572]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.856413]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.880899]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.889747]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.914457]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.923099]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.947674]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.956424]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.980904]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080483.989719]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.014206]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.023101]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.047698]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.056408]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.080887]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.089729]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.114489]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.123316]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.147580]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.156397]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.180925]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.189771]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.214225]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.223131]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.247560]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.256396]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.280946]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.289801]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.314215]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.323094]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.347567]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.356385]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.381042]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.389803]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.414388]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.423114]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.447556]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.456401]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.480876]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.489881]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.514220]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.523133]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.547593]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.556418]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.581124]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.589931]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.614225]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.623126]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.647597]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.656512]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.681088]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.689882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.714251]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.723075]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.747851]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.756518]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.781049]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.789871]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.814308]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.823081]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.847625]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.856434]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.881159]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.889760]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.914234]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.923061]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.947566]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.956440]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.981075]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080484.989756]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.014206]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.023044]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.047703]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.056402]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.081185]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.089749]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.114242]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.123051]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.147705]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.156397]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.181064]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.189913]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.214226]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.223064]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.247579]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.256419]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.280893]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.289738]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.314221]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.323100]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.347722]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.356421]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.380887]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.389787]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.414213]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.423188]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.447707]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.456516]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.481065]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.489943]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.514288]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.523067]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.547634]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.556419]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.581045]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.589857]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.614243]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.623067]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.647670]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.656434]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.680868]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.689776]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.714205]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.723086]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.747689]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.756443]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.780990]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.789869]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.814315]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.823073]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.847584]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.856462]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.880945]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.889995]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.914313]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.923152]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.947565]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.956450]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.981075]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080485.989805]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.014231]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.023041]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.047578]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.056476]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.081001]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.089928]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.114328]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.123276]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.147600]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.156596]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.181014]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.189743]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.214243]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.223230]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.247750]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.256429]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.281034]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.289855]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.314243]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.323113]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.347568]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.356433]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.380887]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.389722]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.414218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.423052]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.447713]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.456573]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.480881]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.489703]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.514285]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.523048]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.547605]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.556423]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.580954]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.589710]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.614224]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.623034]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.647624]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.656399]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.680927]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.689737]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.714210]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.723040]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.747599]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.756413]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.780882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.789711]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.814215]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.823027]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.847636]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.856423]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.880867]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.889710]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.914214]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.923234]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.947556]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.956414]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.980857]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080486.989728]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.014222]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.023088]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.047570]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.056463]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.080868]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.089723]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.114867]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.123108]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.147553]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.156395]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.180896]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.189713]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.214224]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.223069]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.247583]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.256433]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.280884]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.289708]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.314218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.323058]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.347562]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.356436]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.380874]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.389765]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.414207]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.423091]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.447602]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.456494]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.480856]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.489712]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.514221]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.523109]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.547571]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.556472]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.580866]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.589724]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.614205]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.623047]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.647653]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.656428]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.680869]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.689734]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.714243]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.723174]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.747624]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.756523]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.780926]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.789747]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.814233]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.823139]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.847618]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.856504]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.880937]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.889744]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.914267]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.923102]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.947644]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.956397]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.980899]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080487.989725]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.014251]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.023083]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.047562]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.056371]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.080931]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.089733]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.114219]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.123065]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.147614]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.156402]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.181030]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.189790]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.214248]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.223070]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.247555]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.256431]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.280891]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.289717]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.314211]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.323067]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.347571]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.356403]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.380871]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.389729]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.414208]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.423050]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.447584]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.456444]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.480886]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.489721]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.514233]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.523159]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.547549]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.556400]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.580906]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.589730]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.614232]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.623073]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.647563]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.656427]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.681029]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.689797]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.714218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.723086]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.747625]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.756407]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.780951]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.789724]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.814285]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.823089]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.847563]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.856447]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.880867]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.889723]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.914207]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.923071]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.947614]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.956410]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.980877]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080488.989904]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.014218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.023082]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.047631]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.056403]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.080863]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.089784]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.114208]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.123067]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.147577]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.156471]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.180885]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.189721]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.214246]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.223080]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.247641]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.256367]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.280865]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.289709]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.314218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.323252]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.347597]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.356419]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.380861]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.389773]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.414239]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.423104]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.447551]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.456443]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.480864]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.489761]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.514271]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.523160]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.547644]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.556402]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.580878]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.589744]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.614228]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.623089]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.647567]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.656456]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.680926]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.689996]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.714211]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.723086]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.747561]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.756438]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.780870]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.789864]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.814218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.823039]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.847608]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.856403]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.880882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.889767]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.914208]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.923055]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.947578]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.956407]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.980876]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080489.989767]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.014205]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.023046]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.047570]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.056437]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.080882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.089692]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.114293]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.123052]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.147568]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.156444]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.180900]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.189728]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.214323]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.223242]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.247545]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.256396]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.280874]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.289721]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.314261]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.323136]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.347641]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.356395]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.380983]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.389724]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.414507]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.423069]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.447549]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.456441]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.480934]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.489717]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.514213]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.523046]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.547555]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.556393]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.580879]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.589755]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.614401]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.623126]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.647591]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.656394]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.680893]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.689709]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.714271]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.723092]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.747581]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.756418]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.780870]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.789761]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.814269]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.823079]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.847554]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.856448]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.880945]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.889754]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.914217]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.923104]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.947581]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.956434]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.980889]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080490.989727]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.014209]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.023099]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.047570]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.056409]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.080888]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.089756]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.114202]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.123107]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.147607]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.156375]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.180916]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.189728]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.214267]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.223086]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.247553]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.256423]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.280952]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.289761]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.314266]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.323095]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.347547]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.356504]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.380873]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.389714]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.414208]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.423039]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.447576]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.456431]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.480924]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.489707]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.514206]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.523032]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.547572]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.556414]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.580890]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.589695]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.614206]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.623022]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.647604]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.656460]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.680892]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.689726]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.714213]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.723120]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.747629]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.756421]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.780947]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.789726]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.814217]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.823082]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.847557]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.856535]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.880886]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.889736]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.914223]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.923056]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.947660]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.956409]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.981014]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080491.989755]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.014227]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.023047]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.047572]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.056394]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.080884]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.089754]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.114239]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.123050]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.147584]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.156393]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.180893]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.189811]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.214210]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.223044]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.247716]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.256408]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.281062]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.289766]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.314212]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.323063]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.347602]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.356415]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.380875]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.389813]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.414212]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.423056]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.447610]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.456398]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.480886]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.489791]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.514215]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.523142]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.547877]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.556423]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.580878]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.589786]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.614254]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.623117]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.647721]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.656425]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.680915]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.689769]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.714214]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.723077]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.747628]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.756402]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.780938]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.789727]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.814315]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.823053]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.847605]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.856429]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.880949]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.889747]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.914227]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.923065]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.947606]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.956443]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.980891]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080492.989762]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.014219]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.023067]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.047604]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.056411]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.080874]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.089741]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.114236]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.123060]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.147652]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.156387]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080493.171573]: WARNING!
+[INFO] [1661080493.172526]: WARNING!
+[INFO] [1661080493.173092]: WARNING!
+[INFO] [1661080493.173569]: WARNING!
+[INFO] [1661080493.174031]: WARNING!
+[INFO] [1661080493.180883]: Y_LIST[-0.030401034280657768]
+[INFO] [1661080493.189843]: Y_LIST[-0.030401034280657768]
+[INFO] [1661080493.214223]: Y_LIST[-0.030401034280657768]
+[INFO] [1661080493.223054]: Y_LIST[-0.030401034280657768]
+[INFO] [1661080493.247572]: Y_LIST[-0.030401034280657768]
+[INFO] [1661080493.256424]: Y_LIST[-0.030401034280657768]
+[INFO] [1661080493.271432]: WARNING!
+[INFO] [1661080493.272766]: WARNING!
+[INFO] [1661080493.273887]: WARNING!
+[INFO] [1661080493.274711]: WARNING!
+[INFO] [1661080493.275716]: WARNING!
+[INFO] [1661080493.277178]: WARNING!
+[INFO] [1661080493.278121]: WARNING!
+[INFO] [1661080493.279029]: WARNING!
+[INFO] [1661080493.280187]: WARNING!
+[INFO] [1661080493.281125]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768]
+[INFO] [1661080493.281299]: WARNING!
+[INFO] [1661080493.289748]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768]
+[INFO] [1661080493.314324]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768]
+[INFO] [1661080493.323284]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768]
+[INFO] [1661080493.347579]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768]
+[INFO] [1661080493.356450]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768]
+[INFO] [1661080493.371053]: WARNING!
+[INFO] [1661080493.372057]: WARNING!
+[INFO] [1661080493.372705]: WARNING!
+[INFO] [1661080493.373197]: WARNING!
+[INFO] [1661080493.373665]: WARNING!
+[INFO] [1661080493.381080]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.389776]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.414234]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.423145]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.447576]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.456456]: Y_LIST[-0.19989453256130219, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.470829]: WARNING!
+[INFO] [1661080493.471772]: WARNING!
+[INFO] [1661080493.472390]: WARNING!
+[INFO] [1661080493.472907]: WARNING!
+[INFO] [1661080493.480932]: Y_LIST[-0.19989453256130219, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.489770]: Y_LIST[-0.19989453256130219, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.514232]: Y_LIST[-0.19989453256130219, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.523190]: Y_LIST[-0.19989453256130219, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.547668]: Y_LIST[-0.19989453256130219, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.556400]: Y_LIST[-0.19989453256130219, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373]
+[INFO] [1661080493.570659]: WARNING!
+[INFO] [1661080493.571632]: WARNING!
+[INFO] [1661080493.572440]: WARNING!
+[INFO] [1661080493.573014]: WARNING!
+[INFO] [1661080493.573507]: WARNING!
+[INFO] [1661080493.580986]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.589750]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.614252]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.623118]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.647598]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.656414]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.670559]: WARNING!
+[INFO] [1661080493.671461]: WARNING!
+[INFO] [1661080493.672103]: WARNING!
+[INFO] [1661080493.672609]: WARNING!
+[INFO] [1661080493.673093]: WARNING!
+[INFO] [1661080493.681175]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.689769]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.714234]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.723179]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.747623]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.756413]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.770090]: WARNING!
+[INFO] [1661080493.771077]: WARNING!
+[INFO] [1661080493.772014]: WARNING!
+[INFO] [1661080493.772639]: WARNING!
+[INFO] [1661080493.773227]: WARNING!
+[INFO] [1661080493.781004]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.789760]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.814279]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.823163]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.847574]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.856448]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715]
+[INFO] [1661080493.870125]: WARNING!
+[INFO] [1661080493.871050]: WARNING!
+[INFO] [1661080493.871770]: WARNING!
+[INFO] [1661080493.872294]: WARNING!
+[INFO] [1661080493.872793]: WARNING!
+[INFO] [1661080493.873275]: WARNING!
+[INFO] [1661080493.873760]: WARNING!
+[INFO] [1661080493.874263]: WARNING!
+[INFO] [1661080493.880873]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.889729]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.914234]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.923088]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.947559]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.956422]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.969717]: WARNING!
+[INFO] [1661080493.970661]: WARNING!
+[INFO] [1661080493.971529]: WARNING!
+[INFO] [1661080493.972089]: WARNING!
+[INFO] [1661080493.972568]: WARNING!
+[INFO] [1661080493.980871]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080493.989767]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080494.014241]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080494.023077]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080494.047590]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080494.056610]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.025794483721256256]
+[INFO] [1661080494.069651]: WARNING!
+[INFO] [1661080494.070623]: WARNING!
+[INFO] [1661080494.071360]: WARNING!
+[INFO] [1661080494.071914]: WARNING!
+[INFO] [1661080494.072486]: WARNING!
+[INFO] [1661080494.072985]: WARNING!
+[INFO] [1661080494.073459]: WARNING!
+[INFO] [1661080494.073912]: WARNING!
+[INFO] [1661080494.080925]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.089732]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.114255]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.123155]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.147786]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.156602]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.169349]: WARNING!
+[INFO] [1661080494.170269]: WARNING!
+[INFO] [1661080494.171020]: WARNING!
+[INFO] [1661080494.171641]: WARNING!
+[INFO] [1661080494.172169]: WARNING!
+[INFO] [1661080494.180841]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.189758]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.214293]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.223202]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.247580]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.256445]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256]
+[INFO] [1661080494.269284]: WARNING!
+[INFO] [1661080494.270232]: WARNING!
+[INFO] [1661080494.271026]: WARNING!
+[INFO] [1661080494.271614]: WARNING!
+[INFO] [1661080494.272203]: WARNING!
+[INFO] [1661080494.272774]: WARNING!
+[INFO] [1661080494.280840]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.281534]: dynamic
+[INFO] [1661080494.282149]: 0.17150602862238884
+[INFO] [1661080494.289709]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.290428]: dynamic
+[INFO] [1661080494.291020]: 0.17150602862238884
+[INFO] [1661080494.314260]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.315672]: dynamic
+[INFO] [1661080494.317464]: 0.17150602862238884
+[INFO] [1661080494.323127]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.324192]: dynamic
+[INFO] [1661080494.324912]: 0.17150602862238884
+[INFO] [1661080494.347576]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.348557]: dynamic
+[INFO] [1661080494.349251]: 0.17150602862238884
+[INFO] [1661080494.356406]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.357238]: dynamic
+[INFO] [1661080494.357860]: 0.17150602862238884
+[INFO] [1661080494.369457]: WARNING!
+[INFO] [1661080494.371125]: WARNING!
+[INFO] [1661080494.372258]: WARNING!
+[INFO] [1661080494.372917]: WARNING!
+[INFO] [1661080494.373443]: WARNING!
+[INFO] [1661080494.380887]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.381818]: dynamic
+[INFO] [1661080494.382526]: 0.17150602862238884
+[INFO] [1661080494.389733]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.390502]: dynamic
+[INFO] [1661080494.391137]: 0.17150602862238884
+[INFO] [1661080494.414262]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.415279]: dynamic
+[INFO] [1661080494.415949]: 0.17150602862238884
+[INFO] [1661080494.423075]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.423965]: dynamic
+[INFO] [1661080494.424622]: 0.17150602862238884
+[INFO] [1661080494.447714]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.448991]: dynamic
+[INFO] [1661080494.449769]: 0.17150602862238884
+[INFO] [1661080494.456398]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.457132]: dynamic
+[INFO] [1661080494.457793]: 0.17150602862238884
+[INFO] [1661080494.464478]: WARNING!
+[INFO] [1661080494.465855]: WARNING!
+[INFO] [1661080494.466621]: WARNING!
+[INFO] [1661080494.467222]: WARNING!
+[INFO] [1661080494.467948]: WARNING!
+[INFO] [1661080494.480910]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.481931]: dynamic
+[INFO] [1661080494.482736]: 0.17150602862238884
+[INFO] [1661080494.489789]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.490795]: dynamic
+[INFO] [1661080494.491641]: 0.17150602862238884
+[INFO] [1661080494.514230]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.515231]: dynamic
+[INFO] [1661080494.515976]: 0.17150602862238884
+[INFO] [1661080494.523318]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.525041]: dynamic
+[INFO] [1661080494.526314]: 0.17150602862238884
+[INFO] [1661080494.547579]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.548542]: dynamic
+[INFO] [1661080494.549288]: 0.17150602862238884
+[INFO] [1661080494.556409]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.557211]: dynamic
+[INFO] [1661080494.557797]: 0.17150602862238884
+[INFO] [1661080494.564867]: WARNING!
+[INFO] [1661080494.566251]: WARNING!
+[INFO] [1661080494.567874]: WARNING!
+[INFO] [1661080494.568629]: WARNING!
+[INFO] [1661080494.569349]: WARNING!
+[INFO] [1661080494.580881]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.581789]: dynamic
+[INFO] [1661080494.582486]: 0.17150602862238884
+[INFO] [1661080494.589784]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.590666]: dynamic
+[INFO] [1661080494.591496]: 0.17150602862238884
+[INFO] [1661080494.614231]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.615279]: dynamic
+[INFO] [1661080494.615967]: 0.17150602862238884
+[INFO] [1661080494.623096]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.623999]: dynamic
+[INFO] [1661080494.624753]: 0.17150602862238884
+[INFO] [1661080494.647648]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.649235]: dynamic
+[INFO] [1661080494.650086]: 0.17150602862238884
+[INFO] [1661080494.656418]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.657285]: dynamic
+[INFO] [1661080494.657997]: 0.17150602862238884
+[INFO] [1661080494.664243]: WARNING!
+[INFO] [1661080494.665553]: WARNING!
+[INFO] [1661080494.666119]: WARNING!
+[INFO] [1661080494.666677]: WARNING!
+[INFO] [1661080494.667437]: WARNING!
+[INFO] [1661080494.680901]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.681797]: dynamic
+[INFO] [1661080494.682605]: 0.17150602862238884
+[INFO] [1661080494.689760]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.690789]: dynamic
+[INFO] [1661080494.691483]: 0.17150602862238884
+[INFO] [1661080494.714294]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.715285]: dynamic
+[INFO] [1661080494.716131]: 0.17150602862238884
+[INFO] [1661080494.723120]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.724697]: dynamic
+[INFO] [1661080494.725947]: 0.17150602862238884
+[INFO] [1661080494.747569]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.748585]: dynamic
+[INFO] [1661080494.749317]: 0.17150602862238884
+[INFO] [1661080494.756402]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.757164]: dynamic
+[INFO] [1661080494.757728]: 0.17150602862238884
+[INFO] [1661080494.764006]: WARNING!
+[INFO] [1661080494.766418]: WARNING!
+[INFO] [1661080494.768136]: WARNING!
+[INFO] [1661080494.769032]: WARNING!
+[INFO] [1661080494.769798]: WARNING!
+[INFO] [1661080494.780891]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.781850]: dynamic
+[INFO] [1661080494.782521]: 0.17150602862238884
+[INFO] [1661080494.789730]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.790479]: dynamic
+[INFO] [1661080494.791120]: 0.17150602862238884
+[INFO] [1661080494.814243]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.815284]: dynamic
+[INFO] [1661080494.815966]: 0.17150602862238884
+[INFO] [1661080494.823048]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.823855]: dynamic
+[INFO] [1661080494.824438]: 0.17150602862238884
+[INFO] [1661080494.847603]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.849118]: dynamic
+[INFO] [1661080494.849973]: 0.17150602862238884
+[INFO] [1661080494.856410]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.857284]: dynamic
+[INFO] [1661080494.857869]: 0.17150602862238884
+[INFO] [1661080494.863635]: WARNING!
+[INFO] [1661080494.864926]: WARNING!
+[INFO] [1661080494.865427]: WARNING!
+[INFO] [1661080494.865945]: WARNING!
+[INFO] [1661080494.866398]: WARNING!
+[INFO] [1661080494.880914]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.881900]: dynamic
+[INFO] [1661080494.882715]: 0.17150602862238884
+[INFO] [1661080494.889811]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.891030]: dynamic
+[INFO] [1661080494.892027]: 0.17150602862238884
+[INFO] [1661080494.914243]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.915228]: dynamic
+[INFO] [1661080494.916012]: 0.17150602862238884
+[INFO] [1661080494.923218]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.924450]: dynamic
+[INFO] [1661080494.926143]: 0.17150602862238884
+[INFO] [1661080494.947579]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.948560]: dynamic
+[INFO] [1661080494.949274]: 0.17150602862238884
+[INFO] [1661080494.956424]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.957253]: dynamic
+[INFO] [1661080494.957854]: 0.17150602862238884
+[INFO] [1661080494.963495]: WARNING!
+[INFO] [1661080494.965820]: WARNING!
+[INFO] [1661080494.967015]: WARNING!
+[INFO] [1661080494.968087]: WARNING!
+[INFO] [1661080494.969145]: WARNING!
+[INFO] [1661080494.980889]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.981744]: dynamic
+[INFO] [1661080494.982445]: 0.17150602862238884
+[INFO] [1661080494.989754]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080494.990664]: dynamic
+[INFO] [1661080494.991373]: 0.17150602862238884
+[INFO] [1661080495.014248]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.015225]: dynamic
+[INFO] [1661080495.016000]: 0.17150602862238884
+[INFO] [1661080495.023097]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.024042]: dynamic
+[INFO] [1661080495.024711]: 0.17150602862238884
+[INFO] [1661080495.047670]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.049058]: dynamic
+[INFO] [1661080495.049893]: 0.17150602862238884
+[INFO] [1661080495.056431]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.057282]: dynamic
+[INFO] [1661080495.057988]: 0.17150602862238884
+[INFO] [1661080495.063302]: WARNING!
+[INFO] [1661080495.064708]: WARNING!
+[INFO] [1661080495.065895]: WARNING!
+[INFO] [1661080495.066380]: WARNING!
+[INFO] [1661080495.067045]: WARNING!
+[INFO] [1661080495.080854]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.081635]: dynamic
+[INFO] [1661080495.082295]: 0.17150602862238884
+[INFO] [1661080495.089789]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.090791]: dynamic
+[INFO] [1661080495.091577]: 0.17150602862238884
+[INFO] [1661080495.114228]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.115606]: dynamic
+[INFO] [1661080495.116515]: 0.17150602862238884
+[INFO] [1661080495.123076]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.123998]: dynamic
+[INFO] [1661080495.124872]: 0.17150602862238884
+[INFO] [1661080495.147642]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.148703]: dynamic
+[INFO] [1661080495.149346]: 0.17150602862238884
+[INFO] [1661080495.156387]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.157099]: dynamic
+[INFO] [1661080495.157838]: 0.17150602862238884
+[INFO] [1661080495.162994]: WARNING!
+[INFO] [1661080495.164622]: WARNING!
+[INFO] [1661080495.166022]: WARNING!
+[INFO] [1661080495.167120]: WARNING!
+[INFO] [1661080495.167853]: WARNING!
+[INFO] [1661080495.168719]: WARNING!
+[INFO] [1661080495.169495]: WARNING!
+[INFO] [1661080495.180889]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.181854]: dynamic
+[INFO] [1661080495.182623]: 0.17150602862238884
+[INFO] [1661080495.189728]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.190573]: dynamic
+[INFO] [1661080495.191323]: 0.17150602862238884
+[INFO] [1661080495.214255]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.215381]: dynamic
+[INFO] [1661080495.216376]: 0.17150602862238884
+[INFO] [1661080495.223055]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.223798]: dynamic
+[INFO] [1661080495.224369]: 0.17150602862238884
+[INFO] [1661080495.247659]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.248886]: dynamic
+[INFO] [1661080495.249917]: 0.17150602862238884
+[INFO] [1661080495.256383]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.257184]: dynamic
+[INFO] [1661080495.257820]: 0.17150602862238884
+[INFO] [1661080495.262818]: WARNING!
+[INFO] [1661080495.264146]: WARNING!
+[INFO] [1661080495.264668]: WARNING!
+[INFO] [1661080495.265153]: WARNING!
+[INFO] [1661080495.265635]: WARNING!
+[INFO] [1661080495.266095]: WARNING!
+[INFO] [1661080495.266556]: WARNING!
+[INFO] [1661080495.267058]: WARNING!
+[INFO] [1661080495.280894]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.281836]: dynamic
+[INFO] [1661080495.282460]: 0.17150602862238884
+[INFO] [1661080495.289781]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.290767]: dynamic
+[INFO] [1661080495.291521]: 0.17150602862238884
+[INFO] [1661080495.314238]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.315242]: dynamic
+[INFO] [1661080495.315964]: 0.17150602862238884
+[INFO] [1661080495.323067]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.323916]: dynamic
+[INFO] [1661080495.324923]: 0.17150602862238884
+[INFO] [1661080495.347570]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.348519]: dynamic
+[INFO] [1661080495.349206]: 0.17150602862238884
+[INFO] [1661080495.356410]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.357216]: dynamic
+[INFO] [1661080495.357795]: 0.17150602862238884
+[INFO] [1661080495.362633]: WARNING!
+[INFO] [1661080495.363958]: WARNING!
+[INFO] [1661080495.364702]: WARNING!
+[INFO] [1661080495.365509]: WARNING!
+[INFO] [1661080495.367100]: WARNING!
+[INFO] [1661080495.380907]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.381872]: dynamic
+[INFO] [1661080495.382583]: 0.17150602862238884
+[INFO] [1661080495.389735]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.390503]: dynamic
+[INFO] [1661080495.391175]: 0.17150602862238884
+[INFO] [1661080495.414240]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.415257]: dynamic
+[INFO] [1661080495.415929]: 0.17150602862238884
+[INFO] [1661080495.423081]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.424234]: dynamic
+[INFO] [1661080495.424940]: 0.17150602862238884
+[INFO] [1661080495.447638]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.448918]: dynamic
+[INFO] [1661080495.449936]: 0.17150602862238884
+[INFO] [1661080495.456419]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.457298]: dynamic
+[INFO] [1661080495.457928]: 0.17150602862238884
+[INFO] [1661080495.466620]: WARNING!
+[INFO] [1661080495.467608]: WARNING!
+[INFO] [1661080495.468861]: WARNING!
+[INFO] [1661080495.469336]: WARNING!
+[INFO] [1661080495.469801]: WARNING!
+[INFO] [1661080495.480868]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.481767]: dynamic
+[INFO] [1661080495.482371]: 0.17150602862238884
+[INFO] [1661080495.489766]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.491138]: dynamic
+[INFO] [1661080495.492019]: 0.17150602862238884
+[INFO] [1661080495.514213]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.515205]: dynamic
+[INFO] [1661080495.517048]: 0.17150602862238884
+[INFO] [1661080495.523083]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.523856]: dynamic
+[INFO] [1661080495.524494]: 0.17150602862238884
+[INFO] [1661080495.547613]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.548635]: dynamic
+[INFO] [1661080495.549331]: 0.17150602862238884
+[INFO] [1661080495.556392]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.557192]: dynamic
+[INFO] [1661080495.557818]: 0.17150602862238884
+[INFO] [1661080495.566738]: WARNING!
+[INFO] [1661080495.569390]: WARNING!
+[INFO] [1661080495.570268]: WARNING!
+[INFO] [1661080495.571262]: WARNING!
+[INFO] [1661080495.572017]: WARNING!
+[INFO] [1661080495.580902]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.581813]: dynamic
+[INFO] [1661080495.582617]: 0.17150602862238884
+[INFO] [1661080495.589747]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.590515]: dynamic
+[INFO] [1661080495.591202]: 0.17150602862238884
+[INFO] [1661080495.614250]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.615335]: dynamic
+[INFO] [1661080495.616092]: 0.17150602862238884
+[INFO] [1661080495.623071]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.623824]: dynamic
+[INFO] [1661080495.624512]: 0.17150602862238884
+[INFO] [1661080495.647774]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.649249]: dynamic
+[INFO] [1661080495.650213]: 0.17150602862238884
+[INFO] [1661080495.656413]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.657157]: dynamic
+[INFO] [1661080495.657738]: 0.17150602862238884
+[INFO] [1661080495.666206]: WARNING!
+[INFO] [1661080495.667508]: WARNING!
+[INFO] [1661080495.668518]: WARNING!
+[INFO] [1661080495.669086]: WARNING!
+[INFO] [1661080495.669661]: WARNING!
+[INFO] [1661080495.680884]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.681746]: dynamic
+[INFO] [1661080495.682384]: 0.17150602862238884
+[INFO] [1661080495.689852]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.691040]: dynamic
+[INFO] [1661080495.692307]: 0.17150602862238884
+[INFO] [1661080495.714226]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.715250]: dynamic
+[INFO] [1661080495.715982]: 0.17150602862238884
+[INFO] [1661080495.723058]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.724011]: dynamic
+[INFO] [1661080495.724818]: 0.17150602862238884
+[INFO] [1661080495.747562]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.748500]: dynamic
+[INFO] [1661080495.749147]: 0.17150602862238884
+[INFO] [1661080495.756431]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.757270]: dynamic
+[INFO] [1661080495.757903]: 0.17150602862238884
+[INFO] [1661080495.766025]: WARNING!
+[INFO] [1661080495.767363]: WARNING!
+[INFO] [1661080495.769685]: WARNING!
+[INFO] [1661080495.770739]: WARNING!
+[INFO] [1661080495.771891]: WARNING!
+[INFO] [1661080495.772903]: WARNING!
+[INFO] [1661080495.773520]: WARNING!
+[INFO] [1661080495.780873]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.781622]: dynamic
+[INFO] [1661080495.782207]: 0.17150602862238884
+[INFO] [1661080495.789735]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.790604]: dynamic
+[INFO] [1661080495.791321]: 0.17150602862238884
+[INFO] [1661080495.814253]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.815302]: dynamic
+[INFO] [1661080495.815961]: 0.17150602862238884
+[INFO] [1661080495.823083]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.824034]: dynamic
+[INFO] [1661080495.824924]: 0.17150602862238884
+[INFO] [1661080495.847580]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.848947]: dynamic
+[INFO] [1661080495.850289]: 0.17150602862238884
+[INFO] [1661080495.856468]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.857450]: dynamic
+[INFO] [1661080495.858082]: 0.17150602862238884
+[INFO] [1661080495.865741]: WARNING!
+[INFO] [1661080495.866822]: WARNING!
+[INFO] [1661080495.867911]: WARNING!
+[INFO] [1661080495.868468]: WARNING!
+[INFO] [1661080495.868963]: WARNING!
+[INFO] [1661080495.880905]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.881652]: dynamic
+[INFO] [1661080495.882345]: 0.17150602862238884
+[INFO] [1661080495.889792]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.890929]: dynamic
+[INFO] [1661080495.892098]: 0.17150602862238884
+[INFO] [1661080495.914235]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.915604]: dynamic
+[INFO] [1661080495.916500]: 0.17150602862238884
+[INFO] [1661080495.923073]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.923875]: dynamic
+[INFO] [1661080495.924526]: 0.17150602862238884
+[INFO] [1661080495.947603]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.948804]: dynamic
+[INFO] [1661080495.949616]: 0.17150602862238884
+[INFO] [1661080495.956385]: Y_LIST[-0.19989453256130219, -0.19564883410930634, -0.19426456093788147, -0.19365550577640533, -0.19127829372882843, -0.0680122897028923, -0.06776043027639389, -0.06764853745698929, -0.06438514590263367, -0.06048323214054108, -0.03081231378018856, -0.030401034280657768, -0.030080588534474373, -0.0268364530056715, -0.026736825704574585, -0.025794483721256256, -0.024108542129397392]
+[INFO] [1661080495.957094]: dynamic
+[INFO] [1661080495.957673]: 0.17150602862238884
+[INFO] [1661080495.980948]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080495.989731]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.014276]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.023059]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.047596]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.056428]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.080884]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.089748]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.114232]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.123051]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.147547]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.156438]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.180891]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.190197]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.214218]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.223005]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.247554]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.256422]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.280878]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.289761]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.314230]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.323056]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.347617]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.356375]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.380867]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.389773]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.414209]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.423038]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.447560]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.456384]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.480870]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.489748]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.514202]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.523140]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.547559]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.556424]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.580858]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.589765]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.614197]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.623069]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.647700]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.656402]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.680866]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.689747]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.714203]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.723062]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.747586]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.756374]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.780884]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.789836]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.814225]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.823043]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.847572]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.856378]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080496.863888]: WARNING!
+[INFO] [1661080496.864917]: WARNING!
+[INFO] [1661080496.866028]: WARNING!
+[INFO] [1661080496.867202]: WARNING!
+[INFO] [1661080496.868113]: WARNING!
+[INFO] [1661080496.869068]: WARNING!
+[INFO] [1661080496.880883]: Y_LIST[-0.10689955204725266]
+[INFO] [1661080496.889723]: Y_LIST[-0.10689955204725266]
+[INFO] [1661080496.914239]: Y_LIST[-0.10689955204725266]
+[INFO] [1661080496.923069]: Y_LIST[-0.10689955204725266]
+[INFO] [1661080496.947590]: Y_LIST[-0.10689955204725266]
+[INFO] [1661080496.956369]: Y_LIST[-0.10689955204725266]
+[INFO] [1661080496.959233]: WARNING!
+[INFO] [1661080496.960134]: WARNING!
+[INFO] [1661080496.960856]: WARNING!
+[INFO] [1661080496.961423]: WARNING!
+[INFO] [1661080496.961947]: WARNING!
+[INFO] [1661080496.980885]: Y_LIST[-0.10689955204725266, -0.008784984238445759]
+[INFO] [1661080496.989720]: Y_LIST[-0.10689955204725266, -0.008784984238445759]
+[INFO] [1661080497.014239]: Y_LIST[-0.10689955204725266, -0.008784984238445759]
+[INFO] [1661080497.023110]: Y_LIST[-0.10689955204725266, -0.008784984238445759]
+[INFO] [1661080497.047559]: Y_LIST[-0.10689955204725266, -0.008784984238445759]
+[INFO] [1661080497.056382]: Y_LIST[-0.10689955204725266, -0.008784984238445759]
+[INFO] [1661080497.080882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080497.089703]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080497.114327]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080497.123097]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080497.147555]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080497.156371]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080497.158570]: WARNING!
+[INFO] [1661080497.180897]: Y_LIST[0.023210732266306877]
+[INFO] [1661080497.189706]: Y_LIST[0.023210732266306877]
+[INFO] [1661080497.214276]: Y_LIST[0.023210732266306877]
+[INFO] [1661080497.223190]: Y_LIST[0.023210732266306877]
+[INFO] [1661080497.247556]: Y_LIST[0.023210732266306877]
+[INFO] [1661080497.256399]: Y_LIST[0.023210732266306877]
+[INFO] [1661080497.258405]: WARNING!
+[INFO] [1661080497.280871]: Y_LIST[]
+[INFO] [1661080497.289704]: Y_LIST[]
+[INFO] [1661080497.314292]: Y_LIST[]
+[INFO] [1661080497.323337]: Y_LIST[]
+[INFO] [1661080497.347542]: Y_LIST[]
+[INFO] [1661080497.356404]: Y_LIST[]
+[INFO] [1661080497.358179]: WARNING!
+[INFO] [1661080497.358981]: WARNING!
+[INFO] [1661080497.359699]: WARNING!
+[INFO] [1661080497.360245]: WARNING!
+[INFO] [1661080497.360744]: WARNING!
+[INFO] [1661080497.380877]: Y_LIST[-0.17034794390201569, 0.047239694744348526]
+[INFO] [1661080497.390090]: Y_LIST[-0.17034794390201569, 0.047239694744348526]
+[INFO] [1661080497.414270]: Y_LIST[-0.17034794390201569, 0.047239694744348526]
+[INFO] [1661080497.423084]: Y_LIST[-0.17034794390201569, 0.047239694744348526]
+[INFO] [1661080497.447592]: Y_LIST[-0.17034794390201569, 0.047239694744348526]
+[INFO] [1661080497.456415]: Y_LIST[-0.17034794390201569, 0.047239694744348526]
+[INFO] [1661080497.458503]: WARNING!
+[INFO] [1661080497.459543]: WARNING!
+[INFO] [1661080497.460102]: WARNING!
+[INFO] [1661080497.460669]: WARNING!
+[INFO] [1661080497.461139]: WARNING!
+[INFO] [1661080497.480899]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.047239694744348526]
+[INFO] [1661080497.489746]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.047239694744348526]
+[INFO] [1661080497.514305]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.047239694744348526]
+[INFO] [1661080497.523239]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.047239694744348526]
+[INFO] [1661080497.547589]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.047239694744348526]
+[INFO] [1661080497.556376]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.047239694744348526]
+[INFO] [1661080497.558174]: WARNING!
+[INFO] [1661080497.559102]: WARNING!
+[INFO] [1661080497.559742]: WARNING!
+[INFO] [1661080497.560227]: WARNING!
+[INFO] [1661080497.560722]: WARNING!
+[INFO] [1661080497.580899]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526]
+[INFO] [1661080497.589688]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526]
+[INFO] [1661080497.614484]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526]
+[INFO] [1661080497.623131]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526]
+[INFO] [1661080497.647575]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526]
+[INFO] [1661080497.656398]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526]
+[INFO] [1661080497.657970]: WARNING!
+[INFO] [1661080497.659089]: WARNING!
+[INFO] [1661080497.659853]: WARNING!
+[INFO] [1661080497.660352]: WARNING!
+[INFO] [1661080497.660824]: WARNING!
+[INFO] [1661080497.661275]: WARNING!
+[INFO] [1661080497.680889]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.689699]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.714375]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.723072]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.747566]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.756406]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.757768]: WARNING!
+[INFO] [1661080497.758723]: WARNING!
+[INFO] [1661080497.759554]: WARNING!
+[INFO] [1661080497.760103]: WARNING!
+[INFO] [1661080497.760773]: WARNING!
+[INFO] [1661080497.780924]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.789711]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.814268]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.823079]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.847597]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.856389]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.857615]: WARNING!
+[INFO] [1661080497.858548]: WARNING!
+[INFO] [1661080497.859378]: WARNING!
+[INFO] [1661080497.860026]: WARNING!
+[INFO] [1661080497.860554]: WARNING!
+[INFO] [1661080497.861011]: WARNING!
+[INFO] [1661080497.880893]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.889708]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.914251]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.923079]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.947570]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.956395]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04943138733506203]
+[INFO] [1661080497.957615]: WARNING!
+[INFO] [1661080497.958429]: WARNING!
+[INFO] [1661080497.959105]: WARNING!
+[INFO] [1661080497.959671]: WARNING!
+[INFO] [1661080497.960181]: WARNING!
+[INFO] [1661080497.980912]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203]
+[INFO] [1661080497.989721]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203]
+[INFO] [1661080498.014322]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203]
+[INFO] [1661080498.023068]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203]
+[INFO] [1661080498.047580]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203]
+[INFO] [1661080498.056482]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203]
+[INFO] [1661080498.056923]: WARNING!
+[INFO] [1661080498.058667]: WARNING!
+[INFO] [1661080498.059444]: WARNING!
+[INFO] [1661080498.060213]: WARNING!
+[INFO] [1661080498.061050]: WARNING!
+[INFO] [1661080498.080883]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.089722]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.114267]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.123151]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.147581]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.156529]: Y_LIST[-0.17034794390201569, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.156992]: WARNING!
+[INFO] [1661080498.159038]: WARNING!
+[INFO] [1661080498.159700]: WARNING!
+[INFO] [1661080498.160245]: WARNING!
+[INFO] [1661080498.160753]: WARNING!
+[INFO] [1661080498.161217]: WARNING!
+[INFO] [1661080498.161689]: WARNING!
+[INFO] [1661080498.180876]: Y_LIST[-0.17034794390201569, -0.031914401799440384, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.189759]: Y_LIST[-0.17034794390201569, -0.031914401799440384, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.214288]: Y_LIST[-0.17034794390201569, -0.031914401799440384, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.223099]: Y_LIST[-0.17034794390201569, -0.031914401799440384, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.247576]: Y_LIST[-0.17034794390201569, -0.031914401799440384, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.256422]: WARNING!
+[INFO] [1661080498.256779]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.257528]: WARNING!
+[INFO] [1661080498.259105]: WARNING!
+[INFO] [1661080498.259836]: WARNING!
+[INFO] [1661080498.260342]: WARNING!
+[INFO] [1661080498.260818]: WARNING!
+[INFO] [1661080498.261266]: WARNING!
+[INFO] [1661080498.280889]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.289733]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.314243]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.323125]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.347927]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.356259]: WARNING!
+[INFO] [1661080498.356711]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.357375]: WARNING!
+[INFO] [1661080498.359051]: WARNING!
+[INFO] [1661080498.359849]: WARNING!
+[INFO] [1661080498.360418]: WARNING!
+[INFO] [1661080498.361031]: WARNING!
+[INFO] [1661080498.361486]: WARNING!
+[INFO] [1661080498.361930]: WARNING!
+[INFO] [1661080498.362367]: WARNING!
+[INFO] [1661080498.380929]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.389788]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.414240]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.423059]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.447876]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.456505]: Y_LIST[-0.17034794390201569, -0.031914401799440384, -0.027737781405448914, -0.022561650723218918, 0.032853007316589355, 0.0396818108856678, 0.04482806473970413, 0.04680125415325165, 0.047239694744348526, 0.04909994453191757, 0.04943138733506203, 0.08792825043201447]
+[INFO] [1661080498.480882]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.489746]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.514226]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.523041]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.547571]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.556423]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.560353]: WARNING!
+[INFO] [1661080498.580895]: Y_LIST[]
+[INFO] [1661080498.589742]: Y_LIST[]
+[INFO] [1661080498.614226]: Y_LIST[]
+[INFO] [1661080498.623043]: Y_LIST[]
+[INFO] [1661080498.647783]: Y_LIST[]
+[INFO] [1661080498.656411]: Y_LIST[]
+[INFO] [1661080498.660111]: WARNING!
+[INFO] [1661080498.680888]: Y_LIST[]
+[INFO] [1661080498.689748]: Y_LIST[]
+[INFO] [1661080498.714229]: Y_LIST[]
+[INFO] [1661080498.723044]: Y_LIST[]
+[INFO] [1661080498.747677]: Y_LIST[]
+[INFO] [1661080498.756411]: Y_LIST[]
+[INFO] [1661080498.780869]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.789768]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.814217]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.823065]: DEFAULT DRIVE!!!!!!!!!
+[0m[ INFO] [1661080480.892133278]: Aruco detection ready[0m
+[0m[ INFO] [1661080480.608334066]: Initializing nodelet with 8 worker threads.[0m
+[0m[ INFO] [1661080480.804646659]: Using transport "raw"[0m
+[0m[ INFO] [1661080480.650775911]: Initializing nodelet with 20 worker threads.[0m
+[0m[ INFO] [1661080480.707404823]: [Obstacle Extractor]: Initializing nodelet[0m
+[0m[ INFO] [1661080480.770361278]: [Scans Merger]: Initializing nodelet[0m
+[0m[ INFO] [1661080480.814508988]: [Obstacle Publisher]: Initializing nodelet[0m
+[0m[ INFO] [1661080499.744827820]: [Obstacle Publisher]: Shutdown[0m
+[0m[ INFO] [1661080480.844469556]: using default calibration URL[0m
+[0m[ INFO] [1661080480.846585590]: camera calibration URL: file:///home/wego/.ros/camera_info/head_camera.yaml[0m
+[0m[ INFO] [1661080480.847158345]: Starting 'head_camera' (/dev/video0) at 640x480 via mmap (yuyv) at 30 FPS[0m
+[0m[ INFO] [1661080480.585054110]: RPLIDAR running on ROS package rplidar_ros, SDK Version:2.0.0[0m
+[0m[ INFO] [1661080480.638710819]: RPLIDAR S/N: B1FDED8BC0E292D1A3E19EF8222C4A63[0m
+[0m[ INFO] [1661080480.638737732]: Firmware Ver: 1.29[0m
+[0m[ INFO] [1661080480.638746027]: Hardware Rev: 18[0m
+[0m[ INFO] [1661080480.689940525]: RPLidar health status : OK.[0m
+[0m[ INFO] [1661080480.911643672]: current scan mode: DenseBoost, sample rate: 9 Khz, max_distance: 40.0 m, scan frequency:10.0 Hz, [0m
+[INFO] [1661080498.847567]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.856457]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.880877]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.889785]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.914231]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.923236]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.947620]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.956474]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.980875]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080498.989908]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.014221]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.023083]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.047553]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.056421]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.080877]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.089803]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.114268]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.123052]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.147582]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.156442]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.180910]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.189798]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.214249]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.223043]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.247537]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.256458]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.280929]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.289711]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.314438]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.323094]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.347558]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.356417]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.380881]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.389760]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.414298]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.423071]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.447570]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.456387]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.480873]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.489717]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.514261]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.523076]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.547581]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.556388]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.580874]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.589722]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.614323]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.623073]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.647560]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.656386]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.680879]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.689734]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.714350]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.723122]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.747562]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.756507]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.780877]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.789780]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.814264]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.823281]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.847586]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.856466]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.880935]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.889733]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.914271]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.923091]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.947667]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.956453]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.980992]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080499.989767]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.014262]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.023179]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.047577]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.056451]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.080939]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.089793]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.114275]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.123175]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.147606]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.156476]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.180929]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.189774]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.214270]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.223084]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.247567]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.256490]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.280929]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.289732]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.314266]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.323052]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.347602]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.356459]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.380852]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.389719]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.414195]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.423053]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.447609]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.456521]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.480893]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.489728]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.514214]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.523061]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.547746]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.556464]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.580837]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.589727]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.614202]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.623026]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.647539]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.656376]: DEFAULT DRIVE!!!!!!!!!
+[INFO] [1661080500.680879]: DEFAULT DRIVE!!!!!!!!!
+[1mprocess[mux_topic_backward_compat_navigation-11]: started with pid [62768][0m
+[1mprocess[zero_ackermann_cmd-12]: started with pid [62773][0m
+[1mprocess[high_level/ackermann_cmd_mux_nodelet_manager-13]: started with pid [62803][0m
+[1mprocess[high_level/ackermann_cmd_mux-14]: started with pid [62820][0m
+[1mprocess[low_level/ackermann_cmd_mux_nodelet_manager-15]: started with pid [62821][0m
+[1mprocess[low_level/ackermann_cmd_mux-16]: started with pid [62826][0m
+[1mprocess[ackermann_to_vesc-17]: started with pid [62829][0m
+[1mprocess[vesc_driver-18]: started with pid [62833][0m
+[1mprocess[vesc_to_odom-19]: started with pid [62841][0m
+[1mprocess[throttle_interpolator-20]: started with pid [62857][0m
+[1mprocess[rplidarNode-21]: started with pid [62861][0m
+[1mprocess[usb_cam-22]: started with pid [62878][0m
+[1mprocess[image_view-23]: started with pid [62881][0m
+[1mprocess[imu_node-24]: started with pid [62886][0m
+[1mprocess[base_link_to_imu-25]: started with pid [62887][0m
+[1mprocess[base_link_to_laser-26]: started with pid [62888][0m
+[1mprocess[nodelet_manager-27]: started with pid [62894][0m
+[1mprocess[scans_merger-28]: started with pid [62896][0m
+[1mprocess[obstacle_extractor-29]: started with pid [62905][0m
+[1mprocess[obstacle_tracker-30]: started with pid [62914][0m
+[1mprocess[obstacle_publisher-31]: started with pid [62930][0m
+[1mprocess[aruco_detect-32]: started with pid [62954][0m
+[1mprocess[rviz-33]: started with pid [62955][0m
+[rviz-33] killing on exit
+[aruco_detect-32] killing on exit
+[obstacle_publisher-31] killing on exit
+[obstacle_extractor-29] killing on exit
+[nodelet_manager-27] killing on exit
+[base_link_to_laser-26] killing on exit
+[base_link_to_imu-25] killing on exit
+[scans_merger-28] killing on exit
+[imu_node-24] killing on exit
+[image_view-23] killing on exit
+[usb_cam-22] killing on exit
+[rplidarNode-21] killing on exit
+[throttle_interpolator-20] killing on exit
+[vesc_to_odom-19] killing on exit
+[vesc_driver-18] killing on exit
+[ackermann_to_vesc-17] killing on exit
+[low_level/ackermann_cmd_mux-16] killing on exit
+[low_level/ackermann_cmd_mux_nodelet_manager-15] killing on exit
+[high_level/ackermann_cmd_mux-14] killing on exit
+[high_level/ackermann_cmd_mux_nodelet_manager-13] killing on exit
+[zero_ackermann_cmd-12] killing on exit
+[mux_topic_backward_compat_navigation-11] killing on exit
+[mux_topic_backward_compat_teleop-10] killing on exit
+[mux_topic_backward_compat_safety-9] killing on exit
+[mux_chainer-8] killing on exit
+[joy_teleop-7] killing on exit
+[joy_node-6] killing on exit
+[rabacon_drive-5] killing on exit
+[child_sign-4] killing on exit
+[detect_obs-3] killing on exit
+[main_class_run-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
