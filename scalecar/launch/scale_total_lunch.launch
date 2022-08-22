@@ -1,0 +1,14 @@
+<launch>
+    <node name="main_class_run" type="main_class_hsv.py" pkg="scalecar" output="screen"/>
+    <node name="detect_obs" type="detect_clust_obs.py" pkg="scalecar" output="screen"/>
+    <node name="child_sign" type="child_sign.py" pkg="scalecar" output="screen"/>
+    <node name="rabacon_drive" type="rabacon_drive.py" pkg="scalecar" output="screen"/>
+
+
+    <include file="$(find racecar)/launch/teleop.launch"/>
+    <include file="$(find obstacle_detector)/launch/nodelets.launch"/>
+    <include file="$(find aruco_detect)/launch/aruco_detect.launch" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />
+
+</launch>
