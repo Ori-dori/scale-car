@@ -30,6 +30,20 @@
 
 - 정적장애물
 
+## 주요 코드
+
+> 메인 - main_class_hsv.py
+> 
+> 차선 인식 - slidewindow.py
+> 
+> 표지판 인식 - child_sign.py
+> 
+> 장애물 인식 - detect_clust_obs.py
+> 
+> 라바콘 주행 - rabacon_drive.py
+> 
+> master branch - 실험 코드
+
 ## 실행 코드
 
 전체 실행 : `roslaunch scalecar scale_total_launch.launch`
