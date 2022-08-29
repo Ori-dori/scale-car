@@ -65,7 +65,6 @@ class LidarReceiver():
                 else:
                     self.warning_pub.publish("WARNING")
                     self.flag_flag = 0
-
                 rospy.loginfo("OBJECT is DETECTED")
         else:
              self.warning_pub.publish("safe")
