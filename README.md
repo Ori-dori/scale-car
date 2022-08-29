@@ -32,7 +32,7 @@
 
 ## 주요 코드
 
-> 메인 - main_class_hsv.py
+> 메인(판단) - main_class_hsv.py
 > 
 > 차선 인식 - slidewindow.py
 > 
