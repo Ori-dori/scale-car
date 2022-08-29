@@ -4,7 +4,7 @@
 
 팀 이름 : 오리도리
 
-주행 영상 : [https://www.youtube.com/watch?v=H4vQbUzjLGc&t=26s]
+주행 영상 : https://www.youtube.com/watch?v=H4vQbUzjLGc&t=26s
 
 ## 팀원 
 
