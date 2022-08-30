@@ -41,8 +41,11 @@
 > 장애물 인식 - detect_clust_obs.py
 > 
 > 라바콘 주행 - rabacon_drive.py
-> 
+>
+> lidar clustering - https://github.com/tysik/obstacle_detector
+>
 > master branch - 실험 코드
+
 
 ## 실행 코드
 
